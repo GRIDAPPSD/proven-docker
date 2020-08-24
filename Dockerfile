@@ -29,7 +29,7 @@ RUN echo $TIMESTAMP > /dockerbuildversion.txt \
     && apk add --no-cache git nss \
     && mkdir /build \
     && cd /build \
-    && git -c advice.detachedHead=false clone https://github.com/pnnl/proven-message.git -b 'v1.3.7' --single-branch \
+    && git -c advice.detachedHead=false clone https://github.com/pnnl/proven-message.git -b 'v1.3.5.4' --single-branch \
     && cd /build/proven-message \
     && git log -1 --pretty=format:"%h" >> /dockerbuildversion.txt \
     && echo ' : proven-message' >> /dockerbuildversion.txt \
