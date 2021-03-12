@@ -25,7 +25,7 @@ COPY dep/openrdf-alibaba-2.0.jar /root/.m2/repository/org/openrdf/alibaba/alibab
 RUN echo $TIMESTAMP > /dockerbuildversion.txt \
     && echo $TIMESTAMP \
     && apk update \
-    && apk upgrade \
+#    && apk upgrade \
     && apk add --no-cache git nss \
     && mkdir /build \
     && cd /build \
